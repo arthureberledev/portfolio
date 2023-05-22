@@ -29,14 +29,14 @@ export default function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Hey,
+            Hey, I&apos;m Arthur!
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Arthur! I&apos;m a passionate web developer from Nuremberg
-            who works on various projects in his spare time. I&apos;m currently
-            completing my Master&apos;s degree in Computer Science at the Georg
-            Simon Ohm University of Applied Sciences in Nuremberg and work at
-            DATEV eG in the UX/CX department.
+            I&apos;m a passionate web developer from Nuremberg who works on
+            various projects in his spare time. I&apos;m currently completing my
+            Master&apos;s degree in Computer Science at the Georg Simon Ohm
+            University of Applied Sciences in Nuremberg and work at DATEV eG in
+            the UX/CX department.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
