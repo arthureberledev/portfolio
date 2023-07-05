@@ -182,7 +182,7 @@ export const Tech = () => {
           bgColor="rgb(182, 182, 182)"
           className="cursor-pointer"
           title="And many more..."
-          description="Git, GitHub, GitLab, NPM, Yarn, HeadlessUI and RadixUI are some of the tools I use on a daily basis, but I'm still constantly learning about new technologies."
+          description="PostgreSQL, MySQL, Git, GitHub, GitLab, NPM and Yarn are some of the tools I use on a daily basis, but I'm still constantly learning about new technologies."
           href="#"
         />
       </div>

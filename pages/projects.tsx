@@ -8,13 +8,67 @@ import { SimpleLayout } from '@components/simple-layout';
 import derSekretaerLogo from '@images/logos/der-sekretaer.webp';
 import konteriaLogo from '@images/logos/konteria.webp';
 import lovemadepresentsLogo from '@images/logos/lovemadepresents.svg';
-import metalExpressLogo from '@images/logos/metal-express.svg';
+import qreativeLogo from '@images/logos/qreative.svg';
 
 const projects = [
   {
+    name: 'QReative',
+    description:
+      'Software-as-a-Service where Users can generate beautiful QR-Code Artworks.',
+    stack: [
+      {
+        type: 'Frontend/Backend',
+        name: 'Next.js',
+      },
+      {
+        type: 'Styling',
+        name: 'TailwindCSS',
+      },
+      {
+        type: 'Database/Auth',
+        name: 'Supabase (PostgreSQL)',
+      },
+      {
+        type: 'Payments',
+        name: 'Stripe',
+      },
+      {
+        type: 'AI',
+        name: 'OpenAI/Replicate',
+      },
+    ],
+    link: {
+      href: 'https://www.qreative.art',
+      label: 'qreative.art',
+    },
+    logo: qreativeLogo,
+  },
+  {
     name: 'Konteria',
     description:
-      'SaaS App where users can generate content for social media with the help of AI. The Stack includes NextJS for the App and Astro for the Landing Page, TailwindCSS for the Styling and MySQL as the DB.',
+      'Software-as-a-Service where Users can generate content for social media with the help of AI.',
+    stack: [
+      {
+        type: 'Frontend/Backend',
+        name: 'Next.js',
+      },
+      {
+        type: 'Marketing Page',
+        name: 'Astro',
+      },
+      {
+        type: 'Styling',
+        name: 'TailwindCSS',
+      },
+      {
+        type: 'Database',
+        name: 'Planetscale (MySQL)',
+      },
+      {
+        type: 'AI',
+        name: 'OpenAI',
+      },
+    ],
     link: {
       href: 'https://www.konteria.com',
       label: 'konteria.com',
@@ -24,7 +78,17 @@ const projects = [
   {
     name: 'Der Sekretär',
     description:
-      'Website for a real estate agency in Nuremberg. The frontend is built with Astro combined with TailwindCSS and React for dynamic content.',
+      'Marketing Website for a Real Estate Agency in Nuremberg, Germany.',
+    stack: [
+      {
+        type: 'Frontend',
+        name: 'Astro/React',
+      },
+      {
+        type: 'Styling',
+        name: 'TailwindCSS',
+      },
+    ],
     link: {
       href: 'https://xn--dersekretr-y5a.de/',
       label: 'dersekretär.de',
@@ -34,22 +98,38 @@ const projects = [
   {
     name: 'Lovemade Presents',
     description:
-      'E-commerce store for handmade products. Frontend is built with Next.js 13 and TailwindCSS. Backend is built with Strapi CMS and Postgres. Some key features are product customizations, custom cart and coupon system, payments, auth and session management.',
+      'E-Commerce Website for handmade products in Nuremberg, Germany. Some key features are product customizations and organization through the content management system, custom cart and coupon system, payments, auth and session management.',
+    stack: [
+      {
+        type: 'Frontend',
+        name: 'Next.js',
+      },
+      {
+        type: 'Styling',
+        name: 'TailwindCSS',
+      },
+      {
+        type: 'Backend/CMS',
+        name: 'Strapi',
+      },
+      {
+        type: 'Database',
+        name: 'Postgres',
+      },
+      {
+        type: 'Payments',
+        name: 'PayPal',
+      },
+      {
+        type: 'Auth',
+        name: 'NextAuth',
+      },
+    ],
     link: {
       href: 'https://lovemadepresents.de/',
       label: 'lovemadepresents.de',
     },
     logo: lovemadepresentsLogo,
-  },
-  {
-    name: 'Metal Express',
-    description:
-      'API that returns the current and historical prices of metals in different currencies. Fetches the prices daily and writes them into a DB. Built with Node.js, Express, Puppeteer, Cheerio and Postgres. The project is now open source but will not be maintained anymore.',
-    link: {
-      href: 'https://github.com/arthureberledev/metal-express',
-      label: 'github.com',
-    },
-    logo: metalExpressLogo,
   },
 ];
 
@@ -85,6 +165,17 @@ export default function Projects() {
                 <Card.Link href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
+              <ul className="mt-2 list-inside list-disc space-y-2 text-xs">
+                {project.stack.map((tech) => (
+                  <li
+                    key={tech.name}
+                    className="text-zinc-600 dark:text-zinc-400"
+                  >
+                    <span className="font-medium">{tech.type}</span>:{' '}
+                    {tech.name}
+                  </li>
+                ))}
+              </ul>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
                 <Icons.link className="h-6 w-6 flex-none" />
                 <span className="ml-2">{project.link.label}</span>
