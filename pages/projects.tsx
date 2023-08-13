@@ -8,13 +8,13 @@ import { SimpleLayout } from '@components/simple-layout';
 import derSekretaerLogo from '@images/logos/der-sekretaer.webp';
 import konteriaLogo from '@images/logos/konteria.webp';
 import lovemadepresentsLogo from '@images/logos/lovemadepresents.svg';
-import qreativeLogo from '@images/logos/qreative.svg';
+import qriginalsLogo from '@images/logos/qriginals.png';
 
 const projects = [
   {
-    name: 'QReative',
+    name: 'Qriginals',
     description:
-      'Software-as-a-Service where Users can generate beautiful QR-Code Artworks.',
+      'AI-driven QR code generator allowing others to view, appreciate, and utilize QR code designs.',
     stack: [
       {
         type: 'Frontend/Backend',
@@ -25,8 +25,8 @@ const projects = [
         name: 'TailwindCSS',
       },
       {
-        type: 'Database/Auth',
-        name: 'Supabase (PostgreSQL)',
+        type: 'Database/Auth/Storage',
+        name: 'Supabase',
       },
       {
         type: 'Payments',
@@ -38,10 +38,10 @@ const projects = [
       },
     ],
     link: {
-      href: 'https://www.qreative.art',
-      label: 'qreative.art',
+      href: 'https://www.qriginals.com',
+      label: 'qriginals.com',
     },
-    logo: qreativeLogo,
+    logo: qriginalsLogo,
   },
   {
     name: 'Konteria',

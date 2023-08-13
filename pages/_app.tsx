@@ -19,10 +19,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <Header />
         <main>
           <Component {...pageProps} />
-          <Analytics />
         </main>
         <Footer />
       </div>
+      <Analytics />
     </>
   );
 }
