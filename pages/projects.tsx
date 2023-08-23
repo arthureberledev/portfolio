@@ -6,11 +6,35 @@ import { Icons } from '@components/icons';
 import { SimpleLayout } from '@components/simple-layout';
 
 import derSekretaerLogo from '@images/logos/der-sekretaer.webp';
-import konteriaLogo from '@images/logos/konteria.webp';
 import lovemadepresentsLogo from '@images/logos/lovemadepresents.svg';
 import qriginalsLogo from '@images/logos/qriginals.png';
+import socialnetplansLogo from '@images/logos/socialnetplans.svg';
 
 const projects = [
+  {
+    name: 'Socialnetplans',
+    description:
+      'Marketing website for a social media agency in Nuremberg, Germany.',
+    stack: [
+      {
+        type: 'Frontend',
+        name: 'Astro',
+      },
+      {
+        type: 'Styling',
+        name: 'TailwindCSS',
+      },
+      {
+        type: 'Hosting',
+        name: 'Netlify',
+      },
+    ],
+    link: {
+      href: 'https://socialnetplans.de/',
+      label: 'socialnetplans.de',
+    },
+    logo: socialnetplansLogo,
+  },
   {
     name: 'Qriginals',
     description:
@@ -36,6 +60,10 @@ const projects = [
         type: 'AI',
         name: 'OpenAI/Replicate',
       },
+      {
+        type: 'Hosting',
+        name: 'Supabase/Vercel',
+      },
     ],
     link: {
       href: 'https://www.qriginals.com',
@@ -43,38 +71,38 @@ const projects = [
     },
     logo: qriginalsLogo,
   },
-  {
-    name: 'Konteria',
-    description:
-      'Software-as-a-Service where Users can generate content for social media with the help of AI.',
-    stack: [
-      {
-        type: 'Frontend/Backend',
-        name: 'Next.js',
-      },
-      {
-        type: 'Marketing Page',
-        name: 'Astro',
-      },
-      {
-        type: 'Styling',
-        name: 'TailwindCSS',
-      },
-      {
-        type: 'Database',
-        name: 'Planetscale (MySQL)',
-      },
-      {
-        type: 'AI',
-        name: 'OpenAI',
-      },
-    ],
-    link: {
-      href: 'https://www.konteria.com',
-      label: 'konteria.com',
-    },
-    logo: konteriaLogo,
-  },
+  // {
+  //   name: 'Konteria',
+  //   description:
+  //     'Software-as-a-Service where Users can generate content for social media with the help of AI.',
+  //   stack: [
+  //     {
+  //       type: 'Frontend/Backend',
+  //       name: 'Next.js',
+  //     },
+  //     {
+  //       type: 'Marketing Page',
+  //       name: 'Astro',
+  //     },
+  //     {
+  //       type: 'Styling',
+  //       name: 'TailwindCSS',
+  //     },
+  //     {
+  //       type: 'Database',
+  //       name: 'Planetscale (MySQL)',
+  //     },
+  //     {
+  //       type: 'AI',
+  //       name: 'OpenAI',
+  //     },
+  //   ],
+  //   link: {
+  //     href: 'https://www.konteria.com',
+  //     label: 'konteria.com',
+  //   },
+  //   logo: konteriaLogo,
+  // },
   {
     name: 'Der Sekretär',
     description:
@@ -87,6 +115,10 @@ const projects = [
       {
         type: 'Styling',
         name: 'TailwindCSS',
+      },
+      {
+        type: 'Hosting',
+        name: 'Netlify',
       },
     ],
     link: {
@@ -124,6 +156,10 @@ const projects = [
         type: 'Auth',
         name: 'NextAuth',
       },
+      {
+        type: 'Hosting',
+        name: 'Railway/Netlify',
+      },
     ],
     link: {
       href: 'https://lovemadepresents.de/',
@@ -153,7 +189,7 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+              <div className="group relative z-10 flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <Image
                   src={project.logo}
                   alt="project logo"
@@ -167,10 +203,7 @@ export default function Projects() {
               <Card.Description>{project.description}</Card.Description>
               <ul className="mt-2 list-inside list-disc space-y-2 text-xs">
                 {project.stack.map((tech) => (
-                  <li
-                    key={tech.name}
-                    className="text-zinc-600 dark:text-zinc-400"
-                  >
+                  <li key={tech.name} className="text-zinc-500">
                     <span className="font-medium">{tech.type}</span>:{' '}
                     {tech.name}
                   </li>

@@ -34,7 +34,7 @@ const TechItem = ({
         href={href}
         {...props}
       >
-        <div className="absolute z-10 w-8 h-8 overflow-hidden rounded shadow -right-2 -top-2">
+        <div className="absolute -right-2 -top-2 z-10 h-8 w-8 overflow-hidden rounded shadow">
           <Logo />
         </div>
         <div className="absolute inset-0 overflow-hidden">
@@ -61,7 +61,7 @@ const TechItem = ({
 export const Tech = () => {
   return (
     <div className="grid grid-cols-2 gap-5 lg:col-start-1">
-      <div className="duration-200 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-200">
         <TechItem
           logo={Logos.javascript}
           bgColor="rgb(239, 219, 80)"
@@ -70,7 +70,7 @@ export const Tech = () => {
           href="https://www.javascript.com/"
         />
       </div>
-      <div className="duration-200 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-200">
         <TechItem
           logo={Logos.typescript}
           bgColor="rgb(0, 122, 204)"
@@ -80,7 +80,7 @@ export const Tech = () => {
         />
       </div>
 
-      <div className="duration-300 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-300">
         <TechItem
           logo={Logos.react}
           bgColor="rgb(97, 219, 251)"
@@ -89,7 +89,7 @@ export const Tech = () => {
           href="https://reactjs.org/"
         />
       </div>
-      <div className="duration-300 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-300">
         <TechItem
           logo={Logos.nextjs}
           bgColor="rgb(102, 102, 102)"
@@ -99,16 +99,7 @@ export const Tech = () => {
         />
       </div>
 
-      <div className="duration-500 animate-in fade-in slide-in-from-left-5">
-        <TechItem
-          logo={Logos.angular}
-          bgColor="rgb(221, 0, 49)"
-          title="Angular"
-          description="Using it along with RxJS to build web apps at my current job."
-          href="https://angular.io/"
-        />
-      </div>
-      <div className="duration-500 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-500">
         <TechItem
           logo={Logos.astro}
           bgColor="rgb(255, 93, 1)"
@@ -117,8 +108,17 @@ export const Tech = () => {
           href="https://astro.build/"
         />
       </div>
+      <div className="animate-in fade-in slide-in-from-left-5 duration-500">
+        <TechItem
+          logo={Logos.angular}
+          bgColor="rgb(221, 0, 49)"
+          title="Angular"
+          description="Using it along with RxJS to build web apps at my current job."
+          href="https://angular.io/"
+        />
+      </div>
 
-      <div className="duration-700 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-700">
         <TechItem
           logo={Logos.tailwind}
           bgColor="rgb(7, 182, 213)"
@@ -127,17 +127,17 @@ export const Tech = () => {
           href="https://tailwindcss.com/"
         />
       </div>
-      <div className="duration-700 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-700">
         <TechItem
-          logo={Logos.mui}
-          bgColor="rgb(0, 129, 203)"
-          title="Material UI"
-          description="A simple, customizable, and accessible library of React components."
-          href="https://mui.com/"
+          logo={Logos.supabase}
+          bgColor="rgb(60, 208, 142)"
+          title="Supabase"
+          description="An open-source alternative to Firebase, offering db, auth, storage and more."
+          href="https://supabase.com/"
         />
       </div>
 
-      <div className="duration-1000 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-1000">
         <TechItem
           logo={Logos.cypress}
           bgColor="rgb(128, 128, 128)"
@@ -146,7 +146,7 @@ export const Tech = () => {
           href="https://www.cypress.io/"
         />
       </div>
-      <div className="duration-1000 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-1000">
         <TechItem
           logo={Logos.jest}
           bgColor="rgb(198, 61, 20)"
@@ -156,33 +156,33 @@ export const Tech = () => {
         />
       </div>
 
-      <div className="duration-1000 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-1000">
         <TechItem
-          logo={Logos.strapi}
-          bgColor="rgb(149, 147, 255)"
-          title="Strapi"
-          description="A popular CMS written in JS. Have used it for an e-commerce store."
-          href="https://strapi.io/"
+          logo={Logos.playwright}
+          bgColor="rgb(29, 141, 34)"
+          title="Playwright"
+          description="A cutting-edge framework for end-to-end testing across multiple browsers."
+          href="https://playwright.dev/"
         />
       </div>
-      <div className="duration-1000 animate-in fade-in slide-in-from-left-5">
+      <div className="animate-in fade-in slide-in-from-left-5 duration-1000">
         <TechItem
-          logo={Logos.cSharp}
+          logo={Logos.openai}
           bgColor="rgb(161, 121, 220)"
-          title="C#"
-          description="Used extensively during lectures, at work and in game development."
-          href="https://learn.microsoft.com/de-de/dotnet/csharp/"
+          title="OpenAI"
+          description="Used OpenAI's API extensively for a couple of applications."
+          href="https://openai.com/"
         />
       </div>
 
-      <div className="col-span-2 duration-1000 animate-in fade-in slide-in-from-left-5">
+      <div className="col-span-2 animate-in fade-in slide-in-from-left-5 duration-1000">
         <TechItem
           as="div"
           logo={Logos.squareBrackets}
           bgColor="rgb(182, 182, 182)"
           className="cursor-pointer"
           title="And many more..."
-          description="PostgreSQL, MySQL, Git, GitHub, GitLab, NPM and Yarn are some of the tools I use on a daily basis, but I'm still constantly learning about new technologies."
+          description="Serverless, CMS, PostgreSQL, MySQL, Git and PNPM are some of the tools and technologies I use on a daily basis, but I am constantly learning about new ones."
           href="#"
         />
       </div>
