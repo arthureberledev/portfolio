@@ -162,7 +162,7 @@ const projects = [
       },
     ],
     link: {
-      href: 'https://lovemadepresents.de/',
+      href: 'https://lovemadepresents.vercel.app/',
       label: 'lovemadepresents.de',
     },
     logo: lovemadepresentsLogo,
