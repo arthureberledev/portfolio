@@ -7,38 +7,78 @@ import { SimpleLayout } from '@components/simple-layout';
 
 import derSekretaerLogo from '@images/logos/der-sekretaer.webp';
 import lovemadepresentsLogo from '@images/logos/lovemadepresents.svg';
+import neroLogo from '@images/logos/nero.png';
 import qriginalsLogo from '@images/logos/qriginals.png';
-import socialnetplansLogo from '@images/logos/socialnetplans.svg';
 
 const projects = [
   {
-    name: 'Socialnetplans',
+    name: 'Nero',
     description:
-      'Marketing website for a social media agency in Nuremberg, Germany.',
+    'AI-driven document editor that integrates a chatbot feature. The system conducts a similarity search to ensure context-aware question answering. Additionally, it boasts agent integration, optimizing both planning and execution processes.',
     stack: [
       {
-        type: 'Frontend',
-        name: 'Astro',
+        type: 'Frontend/Backend',
+        name: 'Next.js',
       },
       {
         type: 'Styling',
         name: 'TailwindCSS',
       },
       {
+        type: 'Database/Auth/Storage',
+        name: 'Supabase',
+      },
+      {
+        type: 'Vector Database',
+        name: 'Supabase/Pinecone',
+      },
+      {
+        type: 'Payments',
+        name: 'Stripe',
+      },
+      {
+        type: 'AI',
+        name: 'Langchain/OpenAI',
+      },
+      {
         type: 'Hosting',
-        name: 'Netlify',
+        name: 'Supabase/Vercel',
       },
     ],
     link: {
-      href: 'https://socialnetplans.de/',
-      label: 'socialnetplans.de',
+      href: 'https://www.usenero.com/',
+      label: 'usenero.com',
     },
-    logo: socialnetplansLogo,
+    logo: neroLogo,
   },
+  // {
+  //   name: 'Socialnetplans',
+  //   description:
+  //     'Marketing website for a social media agency in Nuremberg, Germany.',
+  //   stack: [
+  //     {
+  //       type: 'Frontend',
+  //       name: 'Astro',
+  //     },
+  //     {
+  //       type: 'Styling',
+  //       name: 'TailwindCSS',
+  //     },
+  //     {
+  //       type: 'Hosting',
+  //       name: 'Netlify',
+  //     },
+  //   ],
+  //   link: {
+  //     href: 'https://socialnetplans.de/',
+  //     label: 'socialnetplans.de',
+  //   },
+  //   logo: socialnetplansLogo,
+  // },
   {
     name: 'Qriginals',
     description:
-      'AI-driven QR code generator allowing others to view, appreciate, and utilize QR code designs.',
+      'AI-driven QR Code generator that provides a platform where users can create and share QR Code art. It uses a stable diffusion model to ensure the QR Code art is visually appealing. Additionally, it features a user-friendly interface that makes exploring a breeze.',
     stack: [
       {
         type: 'Frontend/Backend',
@@ -71,42 +111,10 @@ const projects = [
     },
     logo: qriginalsLogo,
   },
-  // {
-  //   name: 'Konteria',
-  //   description:
-  //     'Software-as-a-Service where Users can generate content for social media with the help of AI.',
-  //   stack: [
-  //     {
-  //       type: 'Frontend/Backend',
-  //       name: 'Next.js',
-  //     },
-  //     {
-  //       type: 'Marketing Page',
-  //       name: 'Astro',
-  //     },
-  //     {
-  //       type: 'Styling',
-  //       name: 'TailwindCSS',
-  //     },
-  //     {
-  //       type: 'Database',
-  //       name: 'Planetscale (MySQL)',
-  //     },
-  //     {
-  //       type: 'AI',
-  //       name: 'OpenAI',
-  //     },
-  //   ],
-  //   link: {
-  //     href: 'https://www.konteria.com',
-  //     label: 'konteria.com',
-  //   },
-  //   logo: konteriaLogo,
-  // },
   {
     name: 'Der Sekretär',
     description:
-      'Marketing Website for a Real Estate Agency in Nuremberg, Germany.',
+      'Marketing website for a real-estate agency in Nuremberg, Germany.',
     stack: [
       {
         type: 'Frontend',
@@ -130,7 +138,7 @@ const projects = [
   {
     name: 'Lovemade Presents',
     description:
-      'E-Commerce Website for handmade products in Nuremberg, Germany. Some key features are product customizations and organization through the content management system, custom cart and coupon system, payments, auth and session management.',
+      'E-Commerce shop for handmade products in Nuremberg, Germany. Some key features are product customizations and organization through the content management system, custom cart and coupon system, payments, auth and session management.',
     stack: [
       {
         type: 'Frontend',
